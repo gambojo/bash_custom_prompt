@@ -10,3 +10,5 @@
 [11:17:47] <span style="color:green">user@hostname</span>: <span style="color:blue">~</span> <span style="color:lightblue">(git-branch-if-exist)</span>$
 #### PS2:
 [11:17:47] $
+
+### .bash_prompt_vars required!
