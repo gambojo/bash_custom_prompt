@@ -1,0 +1,24 @@
+#! /usr/bin/env bash
+
+# The color vars
+_BD='\e[1m'        # BOLD
+_DF='\e[0;00m'     # Default
+_DK='\e[30m'       # Dark
+_RD='\e[31m'       # Red
+_GR='\e[32m'       # Green
+_YL='\e[33m'       # Yellow
+_BL='\e[34m'       # Blue
+_VT='\e[35m'       # Violet
+_LT_BL='\e[36m'    # Light blue
+
+# The vars for prompt
+_TIME='\t'         # The current time
+_USER='\u'         # This user
+_HOST='\h'         # This host
+_DIR='\w'          # The current dir
+_NL='\n'           # New line
+
+# The color quote
+_color_quote() ( echo "\[${*}\]" ); alias _qt="_color_quote"
+# Parsing current git branch
+_parse_git_branch() ( git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/' ); alias _br="_parse_git_branch"

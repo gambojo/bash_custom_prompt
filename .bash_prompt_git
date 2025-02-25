@@ -1,0 +1,13 @@
+#! /usr/bin/env bash
+
+source ~/.bash_prompt_vars
+
+if [ "$color_prompt" = yes ]; then
+    PS1="$(_qt ${_BD}${_DF})[${_TIME}]$(_qt ${_BD}${_GR}) ${_USER}@${_HOST}$(_qt ${_DF}): $(_qt ${_BD}${_BL})${_DIR} $(_qt ${_BD}${_LT_BL})$(_br)$(_qt ${_BD}${_DF})$ $(_qt ${_DF})"
+    PS2="$(_qt ${_BD}${_DF})[${_TIME}] $(_qt ${_BD}${_DF})$ $(_qt ${_DF})"
+else
+    PS1="$(_qt ${_BD}${_DF})[${_TIME}]$(_qt ${_BD}${_GR}) ${_USER}@${_HOST}$(_qt ${_DF}): $(_qt ${_BD}${_BL})${_DIR} $(_qt ${_BD}${_LT_BL})$(_br)$(_qt ${_BD}${_DF})$ $(_qt ${_DF})"
+    PS2="$(_qt ${_BD}${_DF})[${_TIME}] $(_qt ${_BD}${_DF})$ $(_qt ${_DF})"
+fi
+
+unset color_prompt force_color_prompt
