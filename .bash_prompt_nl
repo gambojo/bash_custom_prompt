@@ -3,7 +3,7 @@
 source ~/.bash_prompt_vars
 : "${PROMPT_NL_ENABLE:=true}"
 
-if [[ "${PROMPT_NL_ENABLE}" = true ]]; then
+if [[ ${PROMPT_NL_ENABLE} == true ]]; then
     PS1="$(_qt ${_BD}${_RD})╭─$(_qt ${_BD}${_RD})• $(_qt ${_BD}${_GR})${_USER} $(_qt ${_BD}${_LT_BL})(${_HOST})$(_qt ${_DF}): $(_qt ${_BD}${_RD}){ $(_qt ${_BD}${_BL})${_DIR}$(_qt ${_BD}${_RD}) }${_NL}$(_qt ${_BD}${_RD})╰─$(_qt ${_BD}${_RD})$ $(_qt ${_DF})"
     PS2="$(_qt ${_BD}${_RD})  $ $(_qt ${_DF})"
 fi
